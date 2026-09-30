@@ -10,7 +10,9 @@
 
 - README — на русском языке.
 - `SECURITY_AUDIT.md` публикуется в санитизированном виде.
-- В README упоминается `https://texturetasks.ru` без демо-аккаунтов.
+- В README упоминается `https://texturetasks.ru` без демо-аккаунтов
+  (позже отменено: демо-сервер выключен, ссылка в README убрана, чтобы не вести
+  на несуществующую страницу; домен остаётся только в конфигах `deploy/`).
 - Репозиторий: `git@github.com:UserVVL/tasksapp.git` / `https://github.com/UserVVL/tasksapp.git`.
 - Git identity: `UserVVL <UserVVL@users.noreply.github.com>` (настроена глобально).
 - Лицензия НЕ добавляется (раздел «Лицензия» в README отсутствует).
