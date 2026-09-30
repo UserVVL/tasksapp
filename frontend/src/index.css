@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 81% 61%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 225 100% 65%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --border: 0 0% 0% / 0.08;
+    --input: 0 0% 0% / 0.08;
+    --ring: 258 90% 66%;
+    --radius: 20px;
+  }
+
+  .dark {
+    --background: 228 25% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 23% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 23% 16%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 81% 61%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 225 100% 65%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 222 23% 11%;
+    --muted-foreground: 215 16% 47%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --border: 255 255% 100% / 0.08;
+    --input: 255 255% 100% / 0.08;
+    --ring: 258 90% 66%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground font-sans antialiased;
+    background-color: hsl(var(--background));
+  }
+
+  ::selection {
+    background: rgba(139, 92, 246, 0.3);
+    color: #F8FAFC;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-purple-500/50 ring-offset-2 ring-offset-background;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+    filter: invert(0);
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+  }
+
+  .dark input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+
+  input[type="date"] {
+    position: relative;
+  }
+
+  input[type="datetime-local"] {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+    flex-shrink: 1;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.3);
+  }
+}
+
+@layer components {
+  .glass {
+    background: hsl(var(--background) / 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .glass-strong {
+    background: hsl(var(--card) / 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .card-gradient {
+    background: linear-gradient(180deg, hsl(var(--card) / 0.75) 0%, transparent 100%),
+                hsl(var(--card));
+  }
+}

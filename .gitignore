@@ -1,0 +1,21 @@
+# Python backend
+backend/venv/
+backend/**/__pycache__/
+backend/**/*.pyc
+
+# Локальные данные и секреты (не публиковать)
+backend/.env
+backend/dev.db
+/dev.db
+backend/uploads/
+backend/backups/
+*.tar.gz
+PROJECT_NOTES.md
+/image*.png
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# TypeScript build cache
+*.tsbuildinfo
